@@ -13,8 +13,8 @@
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "gen-docs": "typedoc --mode file --out doc/ --theme minimal",
-    "prepublish": "tsc && typedoc --mode file --out doc/ --theme minimal"
+    "gen-docs": "typedoc --mode file --out docs/ --theme minimal",
+    "prepublish": "tsc && typedoc --mode file --out docs/ --theme minimal"
   },
   "author": "Ryozuki",
   "license": "MIT",
@@ -32,6 +32,8 @@
   },
   "devDependencies": {
     "@types/debug": "0.0.30",
-    "@types/request": "^2.47.1"
+    "@types/request": "^2.47.1",
+    "typedoc": "^0.11.1",
+    "typescript": "^2.9.2"
   }
 }

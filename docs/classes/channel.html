@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>HackmudApi | hackmud-chat</title>
+	<title>Channel | hackmud-chat</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
@@ -915,34 +915,43 @@ img { max-width: 100%; }
 		<li class=" tsd-kind-class">
 			<a href="account.html" class="tsd-kind-icon">Account</a>
 		</li>
-		<li class=" tsd-kind-class">
+		<li class="current tsd-kind-class">
 			<a href="channel.html" class="tsd-kind-icon">Channel</a>
+			<ul>
+				<li class=" tsd-kind-constructor tsd-parent-kind-class">
+					<a href="channel.html#constructor" class="tsd-kind-icon">constructor</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a href="channel.html#api" class="tsd-kind-icon">api</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-class">
+					<a href="channel.html#name" class="tsd-kind-icon">name</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-class">
+					<a href="channel.html#ownuser" class="tsd-kind-icon">own<wbr>User</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-class">
+					<a href="channel.html#users" class="tsd-kind-icon">users</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="channel.html#send" class="tsd-kind-icon">send</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="channel.html#sendinterval" class="tsd-kind-icon">send<wbr>Interval</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="channel.html#sendintervalrandom" class="tsd-kind-icon">send<wbr>Interval<wbr>Random</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="channel.html#sendintervalsequence" class="tsd-kind-icon">send<wbr>Interval<wbr>Sequence</a>
+				</li>
+			</ul>
 		</li>
 		<li class=" tsd-kind-class">
 			<a href="channelmessage.html" class="tsd-kind-icon">Channel<wbr>Message</a>
 		</li>
-		<li class="current tsd-kind-class">
+		<li class=" tsd-kind-class">
 			<a href="hackmudapi.html" class="tsd-kind-icon">Hackmud<wbr>Api</a>
-			<ul>
-				<li class=" tsd-kind-constructor tsd-parent-kind-class">
-					<a href="hackmudapi.html#constructor" class="tsd-kind-icon">constructor</a>
-				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-class">
-					<a href="hackmudapi.html#token" class="tsd-kind-icon">token</a>
-				</li>
-				<li class=" tsd-kind-method tsd-parent-kind-class">
-					<a href="hackmudapi.html#getaccountdata" class="tsd-kind-icon">get<wbr>Account<wbr>Data</a>
-				</li>
-				<li class=" tsd-kind-method tsd-parent-kind-class">
-					<a href="hackmudapi.html#getchats" class="tsd-kind-icon">get<wbr>Chats</a>
-				</li>
-				<li class=" tsd-kind-method tsd-parent-kind-class">
-					<a href="hackmudapi.html#sendchannel" class="tsd-kind-icon">send<wbr>Channel</a>
-				</li>
-				<li class=" tsd-kind-method tsd-parent-kind-class">
-					<a href="hackmudapi.html#sendmessage" class="tsd-kind-icon">send<wbr>Message</a>
-				</li>
-			</ul>
 		</li>
 		<li class=" tsd-kind-class">
 			<a href="message.html" class="tsd-kind-icon">Message</a>
@@ -966,11 +975,18 @@ img { max-width: 100%; }
 </nav>
 <div class="container container-main">
 	<div class="content-wrap">
+		<section class="tsd-panel tsd-comment">
+			<div class="tsd-comment tsd-typography">
+				<div class="lead">
+					<p>Represents a hackmud channel.</p>
+				</div>
+			</div>
+		</section>
 		<section class="tsd-panel tsd-hierarchy">
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
 				<li>
-					<span class="target">HackmudApi</span>
+					<span class="target">Channel</span>
 				</li>
 			</ul>
 		</section>
@@ -981,22 +997,25 @@ img { max-width: 100%; }
 					<section class="tsd-index-section ">
 						<h3>Constructors</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="hackmudapi.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="channel.html#constructor" class="tsd-kind-icon">constructor</a></li>
 						</ul>
 					</section>
 					<section class="tsd-index-section ">
 						<h3>Properties</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-property tsd-parent-kind-class"><a href="hackmudapi.html#token" class="tsd-kind-icon">token</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="channel.html#api" class="tsd-kind-icon">api</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-class"><a href="channel.html#name" class="tsd-kind-icon">name</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-class"><a href="channel.html#ownuser" class="tsd-kind-icon">own<wbr>User</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-class"><a href="channel.html#users" class="tsd-kind-icon">users</a></li>
 						</ul>
 					</section>
 					<section class="tsd-index-section ">
 						<h3>Methods</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-method tsd-parent-kind-class"><a href="hackmudapi.html#getaccountdata" class="tsd-kind-icon">get<wbr>Account<wbr>Data</a></li>
-							<li class="tsd-kind-method tsd-parent-kind-class"><a href="hackmudapi.html#getchats" class="tsd-kind-icon">get<wbr>Chats</a></li>
-							<li class="tsd-kind-method tsd-parent-kind-class"><a href="hackmudapi.html#sendchannel" class="tsd-kind-icon">send<wbr>Channel</a></li>
-							<li class="tsd-kind-method tsd-parent-kind-class"><a href="hackmudapi.html#sendmessage" class="tsd-kind-icon">send<wbr>Message</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="channel.html#send" class="tsd-kind-icon">send</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="channel.html#sendinterval" class="tsd-kind-icon">send<wbr>Interval</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="channel.html#sendintervalrandom" class="tsd-kind-icon">send<wbr>Interval<wbr>Random</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="channel.html#sendintervalsequence" class="tsd-kind-icon">send<wbr>Interval<wbr>Sequence</a></li>
 						</ul>
 					</section>
 				</div>
@@ -1008,35 +1027,74 @@ img { max-width: 100%; }
 				<a name="constructor" class="tsd-anchor"></a>
 				<h3>constructor</h3>
 				<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-					<li class="tsd-signature tsd-kind-icon">new <wbr>Hackmud<wbr>Api<span class="tsd-signature-symbol">(</span>token<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="hackmudapi.html" class="tsd-signature-type">HackmudApi</a></li>
+					<li class="tsd-signature tsd-kind-icon">new <wbr>Channel<span class="tsd-signature-symbol">(</span>api<span class="tsd-signature-symbol">: </span><a href="hackmudapi.html" class="tsd-signature-type">HackmudApi</a>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, users<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, ownUser<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="channel.html" class="tsd-signature-type">Channel</a></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/92d09ae/lib/hackmud.api.ts#L11">lib/hackmud.api.ts:11</a></li>
+								<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/122af15/lib/channel.ts#L19">lib/channel.ts:19</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
-								<h5>token: <span class="tsd-signature-type">string</span></h5>
+								<h5>api: <a href="hackmudapi.html" class="tsd-signature-type">HackmudApi</a></h5>
+							</li>
+							<li>
+								<h5>name: <span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li>
+								<h5>users: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+							</li>
+							<li>
+								<h5>ownUser: <span class="tsd-signature-type">string</span></h5>
 							</li>
 						</ul>
-						<h4 class="tsd-returns-title">Returns <a href="hackmudapi.html" class="tsd-signature-type">HackmudApi</a></h4>
+						<h4 class="tsd-returns-title">Returns <a href="channel.html" class="tsd-signature-type">Channel</a></h4>
 					</li>
 				</ul>
 			</section>
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Properties</h2>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-				<a name="token" class="tsd-anchor"></a>
-				<h3>token</h3>
-				<div class="tsd-signature tsd-kind-icon">token<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+				<a name="api" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagPrivate">Private</span> api</h3>
+				<div class="tsd-signature tsd-kind-icon">api<span class="tsd-signature-symbol">:</span> <a href="hackmudapi.html" class="tsd-signature-type">HackmudApi</a></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/92d09ae/lib/hackmud.api.ts#L11">lib/hackmud.api.ts:11</a></li>
+						<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/122af15/lib/channel.ts#L19">lib/channel.ts:19</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<a name="name" class="tsd-anchor"></a>
+				<h3>name</h3>
+				<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/122af15/lib/channel.ts#L17">lib/channel.ts:17</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<a name="ownuser" class="tsd-anchor"></a>
+				<h3>own<wbr>User</h3>
+				<div class="tsd-signature tsd-kind-icon">own<wbr>User<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/122af15/lib/channel.ts#L18">lib/channel.ts:18</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<a name="users" class="tsd-anchor"></a>
+				<h3>users</h3>
+				<div class="tsd-signature tsd-kind-icon">users<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/122af15/lib/channel.ts#L16">lib/channel.ts:16</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -1044,74 +1102,30 @@ img { max-width: 100%; }
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Methods</h2>
 			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-				<a name="getaccountdata" class="tsd-anchor"></a>
-				<h3>get<wbr>Account<wbr>Data</h3>
+				<a name="send" class="tsd-anchor"></a>
+				<h3>send</h3>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-					<li class="tsd-signature tsd-kind-icon">get<wbr>Account<wbr>Data<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="account.html" class="tsd-signature-type">Account</a><span class="tsd-signature-symbol">&gt;</span></li>
+					<li class="tsd-signature tsd-kind-icon">send<span class="tsd-signature-symbol">(</span>msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/92d09ae/lib/hackmud.api.ts#L34">lib/hackmud.api.ts:34</a></li>
+								<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/122af15/lib/channel.ts#L32">lib/channel.ts:32</a></li>
 							</ul>
 						</aside>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="account.html" class="tsd-signature-type">Account</a><span class="tsd-signature-symbol">&gt;</span></h4>
-					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-				<a name="getchats" class="tsd-anchor"></a>
-				<h3>get<wbr>Chats</h3>
-				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-					<li class="tsd-signature tsd-kind-icon">get<wbr>Chats<span class="tsd-signature-symbol">(</span>users<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, after<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, before<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/92d09ae/lib/hackmud.api.ts#L108">lib/hackmud.api.ts:108</a></li>
-							</ul>
-						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Send a message to the channel with ownUser</p>
+							</div>
+						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
-							<li>
-								<h5>users: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
-							</li>
-							<li>
-								<h5><span class="tsd-flag ts-flagOptional">Optional</span> after: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
-							</li>
-							<li>
-								<h5><span class="tsd-flag ts-flagOptional">Optional</span> before: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
-							</li>
-						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
-					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-				<a name="sendchannel" class="tsd-anchor"></a>
-				<h3>send<wbr>Channel</h3>
-				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-					<li class="tsd-signature tsd-kind-icon">send<wbr>Channel<span class="tsd-signature-symbol">(</span>channel<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, user<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/92d09ae/lib/hackmud.api.ts#L66">lib/hackmud.api.ts:66</a></li>
-							</ul>
-						</aside>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<ul class="tsd-parameters">
-							<li>
-								<h5>channel: <span class="tsd-signature-type">string</span></h5>
-							</li>
-							<li>
-								<h5>user: <span class="tsd-signature-type">string</span></h5>
-							</li>
 							<li>
 								<h5>msg: <span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The message</p>
+								</div>
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -1119,31 +1133,91 @@ img { max-width: 100%; }
 				</ul>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-				<a name="sendmessage" class="tsd-anchor"></a>
-				<h3>send<wbr>Message</h3>
+				<a name="sendinterval" class="tsd-anchor"></a>
+				<h3>send<wbr>Interval</h3>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-					<li class="tsd-signature tsd-kind-icon">send<wbr>Message<span class="tsd-signature-symbol">(</span>user<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, toUser<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<li class="tsd-signature tsd-kind-icon">send<wbr>Interval<span class="tsd-signature-symbol">(</span>msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, interval<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Timer</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/92d09ae/lib/hackmud.api.ts#L87">lib/hackmud.api.ts:87</a></li>
+								<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/122af15/lib/channel.ts#L41">lib/channel.ts:41</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Send a message every @param interval ms</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>msg: <span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The message</p>
+								</div>
+							</li>
+							<li>
+								<h5>interval: <span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>Interval in ms</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Timer</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="sendintervalrandom" class="tsd-anchor"></a>
+				<h3>send<wbr>Interval<wbr>Random</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">send<wbr>Interval<wbr>Random<span class="tsd-signature-symbol">(</span>msgs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, interval<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Timer</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/122af15/lib/channel.ts#L58">lib/channel.ts:58</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
-								<h5>user: <span class="tsd-signature-type">string</span></h5>
+								<h5>msgs: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
 							</li>
 							<li>
-								<h5>toUser: <span class="tsd-signature-type">string</span></h5>
-							</li>
-							<li>
-								<h5>msg: <span class="tsd-signature-type">string</span></h5>
+								<h5>interval: <span class="tsd-signature-type">number</span></h5>
 							</li>
 						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Timer</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="sendintervalsequence" class="tsd-anchor"></a>
+				<h3>send<wbr>Interval<wbr>Sequence</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">send<wbr>Interval<wbr>Sequence<span class="tsd-signature-symbol">(</span>msgs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, interval<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Timer</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/122af15/lib/channel.ts#L47">lib/channel.ts:47</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>msgs: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+							</li>
+							<li>
+								<h5>interval: <span class="tsd-signature-type">number</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Timer</span></h4>
 					</li>
 				</ul>
 			</section>
