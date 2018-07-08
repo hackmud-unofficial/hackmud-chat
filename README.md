@@ -26,6 +26,7 @@ import { ChannelMessage, HackmudApi, Message } from "hackmud-chat";
           if (message instanceof ChannelMessage) {
             // tslint:disable-next-line:no-console
             console.log(message.toString());
+            message.channel.send("Hey!");
           }
         }
       }
