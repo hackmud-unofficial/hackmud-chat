@@ -126,19 +126,3 @@ export class HackmudApi {
     });
   }
 }
-
-/*
-  hackmud-chat:client { id: '5b41d522783e8c24a342ba98',
-  hackmud-chat:client   t: 1531041058.1820002,
-  hackmud-chat:client   from_user: 'ryo',
-  hackmud-chat:client   msg: 'sasadsd',
-  hackmud-chat:client   to_user: 'multivac' } +25ms
-  */
-
-  /*
-    hackmud-chat:client { id: '5b41d56c7b97fd38a90f7311',
-  hackmud-chat:client   t: 1531041132.401,
-  hackmud-chat:client   from_user: 'ryo',
-  hackmud-chat:client   msg: 'test',
-  hackmud-chat:client   channel: '0000' } +30ms
-  */

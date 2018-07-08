@@ -5,6 +5,10 @@ import { HackmudApi } from "./hackmud.api";
 
 const debug = Debug("hackmud-chat:channel");
 
+function random(low: number, high: number) {
+  return Math.random() * (high - low) + low;
+}
+
 export class Channel {
   public users: string[];
   public name: string;
@@ -20,5 +24,28 @@ export class Channel {
 
   public async send(msg: string) {
     return await this.api.sendChannel(this.name, this.ownUser, msg);
+  }
+
+  public sendInterval(msg: string, interval: number) {
+    return setInterval(async () => {
+      await this.send(msg);
+    }, interval);
+  }
+
+  public sendIntervalSequence(msgs: string[], interval: number) {
+    let index = 0;
+    return setInterval(async () => {
+      await this.send(msgs[index]);
+      index++;
+      if (index >= msgs.length) {
+        index = 0;
+      }
+    }, interval);
+  }
+
+  public sendIntervalRandom(msgs: string[], interval: number) {
+    return setInterval(async () => {
+      await this.send(msgs[random(0, msgs.length - 1)]);
+    }, interval);
   }
 }

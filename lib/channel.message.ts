@@ -20,4 +20,8 @@ export class ChannelMessage extends Message {
     // tslint:disable-next-line:max-line-length
     return `(${this.accountUser.name}) ${("00" + time.getHours()).slice(-2) + ("00" + time.getMinutes()).slice(-2)} ${this.channel.name} ${this.fromUser} :::${this.msg}:::`;
   }
+
+  public isOwnMessage() {
+    return this.accountUser.name === this.fromUser;
+  }
 }

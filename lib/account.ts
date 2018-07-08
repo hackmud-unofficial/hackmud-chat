@@ -17,11 +17,10 @@ export class Account {
 
   public poll(cb: (messages: Message[]) => void, frequency: number = 1200) {
     // It looks like its ignoring the interval
-    let time = Date.now();
+    let time = (Date.now() / 1000);
     setInterval(async () => {
-      const now = Date.now();
-      const messages = await this.api.getChats(this.users.map((x) => x.name), time / 1000);
-      time = Date.now();
+      const messages = await this.api.getChats(this.users.map((x) => x.name), time);
+      time = (Date.now() / 1000) + 0.001;
 
       const msgArr: Message[] = [];
       for (const user in messages.chats) {
@@ -44,7 +43,6 @@ export class Account {
           }
         }
       }
-
       if (cb) { cb(msgArr); }
 
     }, frequency);
