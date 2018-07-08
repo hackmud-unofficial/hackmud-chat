@@ -30,7 +30,7 @@ export class Account {
             if (messages.chats[user][msg] && messages.chats[user][msg].channel) {
               const msgInfo = messages.chats[user][msg];
               const channel = this.users.filter((x) => x.name === user)[0]
-                .channels.filter((x) => name === messages.chats[user][msg].channel)[0];
+                .channels.filter((x) => x.name === messages.chats[user][msg].channel)[0];
               msgArr.push(new ChannelMessage(this.users.filter((x) => x.name === user)[0], msgInfo.from_user,
                 msgInfo.msg, msgInfo.t, msgInfo.id,
                 channel, msgInfo.is_join || false,

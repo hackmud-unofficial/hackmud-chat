@@ -5,7 +5,7 @@ import { ChannelMessage, HackmudApi, Message } from "../lib";
   const client = new HackmudApi(process.env.TOKEN || "");
   const account = await client.getAccountData();
 
-  account.poll((messages: Message[]) => {
+  account.poll(async (messages: Message[]) => {
     if (messages && messages.length > 0) {
       for (const msg in messages) {
         if (messages[msg]) {
