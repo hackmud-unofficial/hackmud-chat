@@ -9,6 +9,9 @@ function random(low: number, high: number) {
   return Math.random() * (high - low) + low;
 }
 
+/**
+ * Represents a hackmud channel.
+ */
 export class Channel {
   public users: string[];
   public name: string;
@@ -22,10 +25,19 @@ export class Channel {
     this.api = api;
   }
 
+  /**
+   * Send a message to the channel with ownUser
+   * @param msg The message
+   */
   public async send(msg: string) {
     return await this.api.sendChannel(this.name, this.ownUser, msg);
   }
 
+  /**
+   * Send a message every @param interval ms
+   * @param msg The message
+   * @param interval Interval in ms
+   */
   public sendInterval(msg: string, interval: number) {
     return setInterval(async () => {
       await this.send(msg);
