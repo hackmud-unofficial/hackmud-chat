@@ -1,8 +1,17 @@
 import { Channel } from "./channel";
 import { HackmudApi } from "./hackmud.api";
 
+/**
+ * Represents a account user.
+ */
 export class User {
+  /**
+   * The name of the user
+   */
   public name: string;
+  /**
+   * The channels this user has joined.
+   */
   public channels: Channel[];
   private api: HackmudApi;
 

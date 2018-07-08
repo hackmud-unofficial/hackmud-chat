@@ -960,6 +960,13 @@ img { max-width: 100%; }
 </nav>
 <div class="container container-main">
 	<div class="content-wrap">
+		<section class="tsd-panel tsd-comment">
+			<div class="tsd-comment tsd-typography">
+				<div class="lead">
+					<p>Represents a hackmud account with it&#39;s users.</p>
+				</div>
+			</div>
+		</section>
 		<section class="tsd-panel tsd-hierarchy">
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
@@ -1006,7 +1013,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/122af15/lib/account.ts#L12">lib/account.ts:12</a></li>
+								<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/bbcc87f/lib/account.ts#L18">lib/account.ts:18</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1031,7 +1038,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">api<span class="tsd-signature-symbol">:</span> <a href="hackmudapi.html" class="tsd-signature-type">HackmudApi</a></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/122af15/lib/account.ts#L12">lib/account.ts:12</a></li>
+						<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/bbcc87f/lib/account.ts#L18">lib/account.ts:18</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -1041,9 +1048,14 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">users<span class="tsd-signature-symbol">:</span> <a href="user.html" class="tsd-signature-type">User</a><span class="tsd-signature-symbol">[]</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/122af15/lib/account.ts#L11">lib/account.ts:11</a></li>
+						<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/bbcc87f/lib/account.ts#L17">lib/account.ts:17</a></li>
 					</ul>
 				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The users of the account.</p>
+					</div>
+				</div>
 			</section>
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">
@@ -1052,15 +1064,20 @@ img { max-width: 100%; }
 				<a name="poll" class="tsd-anchor"></a>
 				<h3>poll</h3>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-					<li class="tsd-signature tsd-kind-icon">poll<span class="tsd-signature-symbol">(</span>cb<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, frequency<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					<li class="tsd-signature tsd-kind-icon">poll<span class="tsd-signature-symbol">(</span>cb<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, frequency<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Timer</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/122af15/lib/account.ts#L18">lib/account.ts:18</a></li>
+								<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/bbcc87f/lib/account.ts#L29">lib/account.ts:29</a></li>
 							</ul>
 						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Get the new messages every interval specified by <code>frequency</code>.</p>
+							</div>
+						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
@@ -1086,9 +1103,11 @@ img { max-width: 100%; }
 							</li>
 							<li>
 								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> frequency: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;1200</span></h5>
+								<div class="tsd-comment tsd-typography">
+								</div>
 							</li>
 						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Timer</span></h4>
 					</li>
 				</ul>
 			</section>

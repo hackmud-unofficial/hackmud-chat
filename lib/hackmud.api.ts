@@ -7,7 +7,13 @@ import { User } from "./user";
 
 const debug = Debug("hackmud-chat:client");
 
+/**
+ * The main class, used by all other classes.
+ */
 export class HackmudApi {
+  /**
+   * The token to be used with the api.
+   */
   public token: string;
 
   constructor(token: string) {

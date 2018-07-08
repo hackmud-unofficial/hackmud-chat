@@ -7,7 +7,13 @@ import { User } from "./user";
 
 const debug = Debug("hackmud-chat:account");
 
+/**
+ * Represents a hackmud account with it's users.
+ */
 export class Account {
+  /**
+   * The users of the account.
+   */
   public users: User[];
   private api: HackmudApi;
   constructor(api: HackmudApi, users: User[]) {
@@ -15,10 +21,15 @@ export class Account {
     this.users = users;
   }
 
+  /**
+   * Get the new messages every interval specified by `frequency`.
+   * @param cb
+   * @param frequency
+   */
   public poll(cb: (messages: Message[]) => void, frequency: number = 1200) {
     // It looks like its ignoring the interval
     let time = (Date.now() / 1000);
-    setInterval(async () => {
+    return setInterval(async () => {
       const messages = await this.api.getChats(this.users.map((x) => x.name), time);
       time = (Date.now() / 1000) + 0.001;
 

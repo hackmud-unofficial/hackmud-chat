@@ -13,8 +13,19 @@ function random(low: number, high: number) {
  * Represents a hackmud channel.
  */
 export class Channel {
+  /**
+   * The users that are in this channel.
+   */
   public users: string[];
+  /**
+   * The name of the channel
+   */
   public name: string;
+  /**
+   * The account user related to the channel.
+   *
+   * The one that it's to send the messages from when using send(), etc.
+   */
   public ownUser: string;
   private api: HackmudApi;
 
@@ -34,7 +45,7 @@ export class Channel {
   }
 
   /**
-   * Send a message every @param interval ms
+   * Send a message every x ms.
    * @param msg The message
    * @param interval Interval in ms
    */
@@ -44,6 +55,11 @@ export class Channel {
     }, interval);
   }
 
+  /**
+   * Sends the messages in the array in the order given separated by the specified time.
+   * @param msgs The messages
+   * @param interval Interval in ms
+   */
   public sendIntervalSequence(msgs: string[], interval: number) {
     let index = 0;
     return setInterval(async () => {
@@ -55,6 +71,11 @@ export class Channel {
     }, interval);
   }
 
+  /**
+   * Every interval ms send a random message from the given array.
+   * @param msgs The messages
+   * @param interval Interval in ms
+   */
   public sendIntervalRandom(msgs: string[], interval: number) {
     return setInterval(async () => {
       await this.send(msgs[random(0, msgs.length - 1)]);
