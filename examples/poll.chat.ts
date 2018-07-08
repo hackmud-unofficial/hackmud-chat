@@ -1,10 +1,8 @@
-import { ChannelMessage } from "../lib";
-import { HackmudApi } from "../lib";
-import { Message } from "../lib";
+import { ChannelMessage, HackmudApi, Message } from "../lib";
 
-const client = new HackmudApi(process.env.TOKEN || "");
+(async () => {
 
-async function main() {
+  const client = new HackmudApi(process.env.TOKEN || "");
   const account = await client.getAccountData();
 
   account.poll((messages: Message[]) => {
@@ -20,6 +18,5 @@ async function main() {
       }
     }
   });
-}
 
-Promise.all([main()]);
+})();

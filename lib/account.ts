@@ -29,9 +29,11 @@ export class Account {
           for (const msg in messages.chats[user]) {
             if (messages.chats[user][msg] && messages.chats[user][msg].channel) {
               const msgInfo = messages.chats[user][msg];
+              const channel = this.users.filter((x) => x.name === user)[0]
+                .channels.filter((x) => name === messages.chats[user][msg].channel)[0];
               msgArr.push(new ChannelMessage(this.users.filter((x) => x.name === user)[0], msgInfo.from_user,
                 msgInfo.msg, msgInfo.t, msgInfo.id,
-                msgInfo.channel, msgInfo.is_join || false,
+                channel, msgInfo.is_join || false,
                 msgInfo.is_leave || false));
             } else if (messages.chats[user][msg]) {
               const msgInfo = messages.chats[user][msg];
