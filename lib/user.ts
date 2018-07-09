@@ -22,6 +22,14 @@ export class User {
   }
 
   /**
+   * Returns the user channel from the given name.
+   * @param name The channel name
+   */
+  public getChannelByName(name: string) {
+    return this.channels.filter((x) => x.name === name)[0];
+  }
+
+  /**
    * Send a message to another user.
    * @param user The user to send the message to.
    * @param msg The content of the message.

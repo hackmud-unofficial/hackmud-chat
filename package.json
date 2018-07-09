@@ -1,6 +1,6 @@
 {
   "name": "hackmud-chat",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A hackmud chat api wrapper for nodejs.",
   "keywords": [
     "hackmud",

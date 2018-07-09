@@ -22,6 +22,14 @@ export class Account {
   }
 
   /**
+   * Returns the account user from the given name.
+   * @param name The user name
+   */
+  public getUserByName(name: string) {
+    return this.users.filter((x) => x.name === name)[0];
+  }
+
+  /**
    * Get the new messages every interval specified by `frequency`.
    * @param cb
    * @param frequency
