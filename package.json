@@ -1,6 +1,6 @@
 {
   "name": "hackmud-chat",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "A hackmud chat api wrapper for nodejs.",
   "keywords": [
     "hackmud",
@@ -32,6 +32,7 @@
   },
   "devDependencies": {
     "@types/debug": "0.0.30",
+    "@types/node": "^10.5.2",
     "@types/request": "^2.47.1",
     "typedoc": "^0.11.1",
     "typescript": "^2.9.2"

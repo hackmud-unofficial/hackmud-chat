@@ -14,27 +14,35 @@ export class HackmudApi {
   /**
    * The token to be used with the api.
    */
-  public token: string;
+  public token: string = "";
 
-  constructor(token: string) {
-    this.token = token;
+  constructor(token?: string) {
+    if (token) {
+      this.token = token;
+    }
+  }
 
-    if (this.token.length < 6) {
-      // Get the long token
+  public async getToken(pass: string) {
+    if (pass.length > 5) {
+      throw new Error("You passed a token to getToken, and you should pass a password (5 chars)");
+    }
+    return new Promise((resolve, reject) => {
       request.post(API_URL + ENDPOINTS.GET_TOKEN, {
         json: {
-          pass: this.token,
+          pass,
         },
       }, (err, res, body) => {
         if (err) { throw err; }
         debug("Requested get_token:", res.statusCode);
         if (body.ok) {
-          this.token = body.token;
+          debug("Token is:", body.chat_token);
+          this.token = body.chat_token;
+          resolve(body.chat_token);
         } else {
-          throw new Error(body);
+          reject(body);
         }
       });
-    }
+    });
   }
 
   public async getAccountData(): Promise<Account> {
