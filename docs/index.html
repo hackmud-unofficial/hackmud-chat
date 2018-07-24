@@ -957,9 +957,9 @@ img { max-width: 100%; }
 
 <span class="hljs-function">(<span class="hljs-params"><span class="hljs-keyword">async</span> (<span class="hljs-params"></span>) =&gt; {
 
-  <span class="hljs-keyword">const</span> client = <span class="hljs-keyword">new</span> HackmudApi(<span class="hljs-params">process.env.TOKEN || ""</span>);
+  <span class="hljs-keyword">const</span> client = <span class="hljs-keyword">new</span> HackmudApi(<span class="hljs-params"><span class="hljs-comment">/* if you have a token (&gt;5 chars) put it here */</span></span>);
+  <span class="hljs-keyword">await</span> client.getToken(<span class="hljs-params">"pass"</span>); <span class="hljs-comment">// otherwise get the token using the pass</span>
   <span class="hljs-keyword">const</span> account = <span class="hljs-keyword">await</span> client.getAccountData(<span class="hljs-params"></span>);
-
   account.poll(<span class="hljs-params"><span class="hljs-keyword">async</span> (<span class="hljs-params">messages: Message[]</span>) =&gt; {
     <span class="hljs-keyword">if</span> (<span class="hljs-params">messages &amp;&amp; messages.length &gt; 0</span>) {
       <span class="hljs-keyword">for</span> (<span class="hljs-params"><span class="hljs-keyword">const</span> msg <span class="hljs-keyword">in</span> messages</span>) {
@@ -968,7 +968,7 @@ img { max-width: 100%; }
           <span class="hljs-keyword">if</span> (<span class="hljs-params">message <span class="hljs-keyword">instanceof</span> ChannelMessage</span>) {
             <span class="hljs-comment">// tslint:disable-next-line:no-console</span>
             <span class="hljs-built_in">console</span>.log(<span class="hljs-params">message.toString(<span class="hljs-params"></span>)</span>);
-            message.channel.send(<span class="hljs-params">"Hey!"</span>);
+            <span class="hljs-comment">// message.channel.send("Hey!");</span>
           }
         }
       }
@@ -1025,7 +1025,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">API_<wbr>URL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"https://www.hackmud.com/mobile/"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;https://www.hackmud.com/mobile/&quot;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/4c35d48/lib/constants.ts#L1">lib/constants.ts:1</a></li>
+						<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/01e0580/lib/constants.ts#L1">lib/constants.ts:1</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -1035,9 +1035,9 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">debug<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IDebugger</span><span class="tsd-signature-symbol"> =&nbsp;Debug(&quot;hackmud-chat:channel&quot;)</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/4c35d48/lib/account.ts#L8">lib/account.ts:8</a></li>
-						<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/4c35d48/lib/hackmud.api.ts#L8">lib/hackmud.api.ts:8</a></li>
-						<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/4c35d48/lib/channel.ts#L6">lib/channel.ts:6</a></li>
+						<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/01e0580/lib/account.ts#L8">lib/account.ts:8</a></li>
+						<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/01e0580/lib/hackmud.api.ts#L8">lib/hackmud.api.ts:8</a></li>
+						<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/01e0580/lib/channel.ts#L6">lib/channel.ts:6</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -1054,7 +1054,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/4c35d48/lib/channel.ts#L8">lib/channel.ts:8</a></li>
+								<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/01e0580/lib/channel.ts#L8">lib/channel.ts:8</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
