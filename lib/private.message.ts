@@ -14,4 +14,13 @@ export class PrivateMessage extends Message {
     super(accountUser, fromUser, msg, t, id);
     this.toUser = toUser;
   }
+
+  /**
+   * Return a string with the message formatted.
+   */
+  public toString() {
+    const time = new Date(this.t * 1000);
+    // tslint:disable-next-line:max-line-length
+    return `(${this.accountUser.name}) ${("00" + time.getHours()).slice(-2) + ("00" + time.getMinutes()).slice(-2)} ${this.accountUser.name === this.fromUser ? "to " + this.toUser : "from " + this.fromUser} :::${this.msg}:::`;
+  }
 }
