@@ -948,8 +948,11 @@ img { max-width: 100%; }
 				<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a href="channelmessage.html#t" class="tsd-kind-icon">t</a>
 				</li>
-				<li class=" tsd-kind-method tsd-parent-kind-class">
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a href="channelmessage.html#isownmessage" class="tsd-kind-icon">is<wbr>Own<wbr>Message</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="channelmessage.html#reply" class="tsd-kind-icon">reply</a>
 				</li>
 				<li class=" tsd-kind-method tsd-parent-kind-class">
 					<a href="channelmessage.html#tostring" class="tsd-kind-icon">to<wbr>String</a>
@@ -1027,7 +1030,8 @@ img { max-width: 100%; }
 					<section class="tsd-index-section ">
 						<h3>Methods</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-method tsd-parent-kind-class"><a href="channelmessage.html#isownmessage" class="tsd-kind-icon">is<wbr>Own<wbr>Message</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="channelmessage.html#isownmessage" class="tsd-kind-icon">is<wbr>Own<wbr>Message</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="channelmessage.html#reply" class="tsd-kind-icon">reply</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class"><a href="channelmessage.html#tostring" class="tsd-kind-icon">to<wbr>String</a></li>
 						</ul>
 					</section>
@@ -1047,7 +1051,7 @@ img { max-width: 100%; }
 						<aside class="tsd-sources">
 							<p>Overrides <a href="message.html">Message</a>.<a href="message.html#constructor">constructor</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/b257be8/lib/channel.message.ts#L20">lib/channel.message.ts:20</a></li>
+								<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/820bd8c/lib/channel.message.ts#L20">lib/channel.message.ts:20</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1091,7 +1095,7 @@ img { max-width: 100%; }
 				<aside class="tsd-sources">
 					<p>Inherited from <a href="message.html">Message</a>.<a href="message.html#accountuser">accountUser</a></p>
 					<ul>
-						<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/b257be8/lib/message.ts#L25">lib/message.ts:25</a></li>
+						<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/820bd8c/lib/message.ts#L28">lib/message.ts:28</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1106,7 +1110,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">channel<span class="tsd-signature-symbol">:</span> <a href="channel.html" class="tsd-signature-type">Channel</a></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/b257be8/lib/channel.message.ts#L12">lib/channel.message.ts:12</a></li>
+						<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/820bd8c/lib/channel.message.ts#L12">lib/channel.message.ts:12</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1122,12 +1126,12 @@ img { max-width: 100%; }
 				<aside class="tsd-sources">
 					<p>Inherited from <a href="message.html">Message</a>.<a href="message.html#fromuser">fromUser</a></p>
 					<ul>
-						<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/b257be8/lib/message.ts#L12">lib/message.ts:12</a></li>
+						<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/820bd8c/lib/message.ts#L12">lib/message.ts:12</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>The user that send the message</p>
+						<p>The user that send the message.</p>
 					</div>
 				</div>
 			</section>
@@ -1138,12 +1142,12 @@ img { max-width: 100%; }
 				<aside class="tsd-sources">
 					<p>Inherited from <a href="message.html">Message</a>.<a href="message.html#id">id</a></p>
 					<ul>
-						<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/b257be8/lib/message.ts#L21">lib/message.ts:21</a></li>
+						<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/820bd8c/lib/message.ts#L24">lib/message.ts:24</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>The id of the message</p>
+						<p>The id of the message.</p>
 					</div>
 				</div>
 			</section>
@@ -1153,7 +1157,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">is<wbr>Join<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/b257be8/lib/channel.message.ts#L16">lib/channel.message.ts:16</a></li>
+						<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/820bd8c/lib/channel.message.ts#L16">lib/channel.message.ts:16</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1168,7 +1172,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">is<wbr>Leave<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/b257be8/lib/channel.message.ts#L20">lib/channel.message.ts:20</a></li>
+						<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/820bd8c/lib/channel.message.ts#L20">lib/channel.message.ts:20</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1184,9 +1188,14 @@ img { max-width: 100%; }
 				<aside class="tsd-sources">
 					<p>Inherited from <a href="message.html">Message</a>.<a href="message.html#msg">msg</a></p>
 					<ul>
-						<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/b257be8/lib/message.ts#L13">lib/message.ts:13</a></li>
+						<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/820bd8c/lib/message.ts#L16">lib/message.ts:16</a></li>
 					</ul>
 				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The message.</p>
+					</div>
+				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 				<a name="t" class="tsd-anchor"></a>
@@ -1195,7 +1204,7 @@ img { max-width: 100%; }
 				<aside class="tsd-sources">
 					<p>Inherited from <a href="message.html">Message</a>.<a href="message.html#t">t</a></p>
 					<ul>
-						<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/b257be8/lib/message.ts#L17">lib/message.ts:17</a></li>
+						<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/820bd8c/lib/message.ts#L20">lib/message.ts:20</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1207,17 +1216,18 @@ img { max-width: 100%; }
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Methods</h2>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 				<a name="isownmessage" class="tsd-anchor"></a>
 				<h3>is<wbr>Own<wbr>Message</h3>
-				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<li class="tsd-signature tsd-kind-icon">is<wbr>Own<wbr>Message<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
+							<p>Inherited from <a href="message.html">Message</a>.<a href="message.html#isownmessage">isOwnMessage</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/b257be8/lib/channel.message.ts#L42">lib/channel.message.ts:42</a></li>
+								<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/820bd8c/lib/message.ts#L41">lib/message.ts:41</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1226,6 +1236,38 @@ img { max-width: 100%; }
 							</div>
 						</div>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="reply" class="tsd-anchor"></a>
+				<h3>reply</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">reply<span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/820bd8c/lib/channel.message.ts#L36">lib/channel.message.ts:36</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Sends a reply.</p>
+							</div>
+							<p>Example output: @fromUser hey</p>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>message: <span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The message</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 					</li>
 				</ul>
 			</section>
@@ -1239,7 +1281,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/b257be8/lib/channel.message.ts#L33">lib/channel.message.ts:33</a></li>
+								<li>Defined in <a href="https://github.com/hackmud-unofficial/hackmud-chat/blob/820bd8c/lib/channel.message.ts#L43">lib/channel.message.ts:43</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
