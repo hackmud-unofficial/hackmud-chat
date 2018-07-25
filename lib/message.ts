@@ -7,16 +7,19 @@ import { User } from "./user";
  */
 export abstract class Message {
   /**
-   * The user that send the message
+   * The user that send the message.
    */
   public fromUser: string;
+  /**
+   * The message.
+   */
   public msg: string;
   /**
    * Unix timestamp in seconds.
    */
   public t: number;
   /**
-   * The id of the message
+   * The id of the message.
    */
   public id: string;
   /**
@@ -30,5 +33,12 @@ export abstract class Message {
     this.t = t;
     this.id = id;
     this.accountUser = accountUser;
+  }
+
+  /**
+   * Wether this message is sent by the account user.
+   */
+  public isOwnMessage() {
+    return this.accountUser.name === this.fromUser;
   }
 }

@@ -28,18 +28,21 @@ export class ChannelMessage extends Message {
   }
 
   /**
+   * Sends a reply.
+   *
+   * Example output: @fromUser hey
+   * @param message The message
+   */
+  public async reply(message: string) {
+    return await this.channel.send(`@${this.fromUser} ${message}`);
+  }
+
+  /**
    * Return a string with the message formatted.
    */
   public toString() {
     const time = new Date(this.t * 1000);
     // tslint:disable-next-line:max-line-length
     return `(${this.accountUser.name}) ${("00" + time.getHours()).slice(-2) + ("00" + time.getMinutes()).slice(-2)} ${this.channel.name} ${this.fromUser} :::${this.msg}:::`;
-  }
-
-  /**
-   * Wether this message is sent by the account user.
-   */
-  public isOwnMessage() {
-    return this.accountUser.name === this.fromUser;
   }
 }

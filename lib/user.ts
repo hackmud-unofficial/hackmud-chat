@@ -6,7 +6,7 @@ import { HackmudApi } from "./hackmud.api";
  */
 export class User {
   /**
-   * The name of the user
+   * The name of the user.
    */
   public name: string;
   /**
@@ -23,7 +23,7 @@ export class User {
 
   /**
    * Returns the user channel from the given name.
-   * @param name The channel name
+   * @param name The channel name.
    */
   public getChannelByName(name: string) {
     return this.channels.filter((x) => x.name === name)[0];

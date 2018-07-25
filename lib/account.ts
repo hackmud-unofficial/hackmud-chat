@@ -38,10 +38,10 @@ export class Account {
     // It looks like its ignoring the interval
     let time = (Date.now() / 1000);
     return setInterval(async () => {
-      const messages = await this.api.getChats(this.users.map((x) => x.name), time);
-      time = (Date.now() / 1000) + 0.001;
 
-      const msgArr: Message[] = [];
+      const messages = await this.api.getChats(this.users.map((x) => x.name), time);
+
+      let msgArr: Message[] = [];
       for (const user in messages.chats) {
         if (messages.chats[user]) {
           for (const msg in messages.chats[user]) {
@@ -62,6 +62,11 @@ export class Account {
           }
         }
       }
+      msgArr = msgArr.sort((a, b) => a.t - b.t);
+      if (msgArr[msgArr.length - 1] && msgArr[msgArr.length - 1].t) {
+        time = msgArr[msgArr.length - 1].t + 0.01;
+      }
+
       if (cb) { cb(msgArr); }
 
     }, frequency);
