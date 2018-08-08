@@ -52,7 +52,10 @@ export class HackmudApi {
           chat_token: this.token,
         },
       }, (err, res, body) => {
-        if (err) { throw err; }
+        if (err) {
+          reject(err);
+          return;
+        }
         debug("Requested account_data:", res.statusCode);
         if (body.ok) {
           const users: User[] = [];
@@ -87,7 +90,10 @@ export class HackmudApi {
           msg,
         },
       }, (err, res, body) => {
-        if (err) { throw err; }
+        if (err) {
+          reject(err);
+          return;
+        }
         debug("Requested create_chat (send):", res.statusCode);
         if (!body.ok) {
           reject(body);
@@ -108,7 +114,10 @@ export class HackmudApi {
           msg,
         },
       }, (err, res, body) => {
-        if (err) { throw err; }
+        if (err) {
+          reject(err);
+          return;
+        }
         debug("Requested create_chat (tell):", res.statusCode);
         if (!body.ok) {
           reject(body);
@@ -129,7 +138,10 @@ export class HackmudApi {
           after,
         },
       }, (err, res, body) => {
-        if (err) { throw err; }
+        if (err) {
+          reject(err);
+          return;
+        }
         debug("Requested chats:", res.statusCode);
         if (!body.ok) {
           reject(body);
