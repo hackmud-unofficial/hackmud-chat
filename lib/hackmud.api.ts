@@ -1,5 +1,5 @@
 import * as Debug from "debug";
-import * as request from "request";
+import * as request from "request-promise-native";
 import { Account } from "./account";
 import { Channel } from "./channel";
 import { API_URL, ENDPOINTS } from "./constants";
@@ -22,133 +22,81 @@ export class HackmudApi {
     }
   }
 
-  public async getToken(pass: string) {
+  private async request(endpoint: ENDPOINTS, json: any) {
+    return await  request.post(API_URL + endpoint, {json});
+  }
+
+  public async getToken(pass: string): Promise<string> {
     if (pass.length > 5) {
       throw new Error("You passed a token to getToken, and you should pass a password (5 chars)");
     }
-    return new Promise((resolve, reject) => {
-      request.post(API_URL + ENDPOINTS.GET_TOKEN, {
-        json: {
-          pass,
-        },
-      }, (err, res, body) => {
-        if (err) { throw err; }
-        debug("Requested get_token:", res.statusCode);
-        if (body.ok) {
-          debug("Token is:", body.chat_token);
-          this.token = body.chat_token;
-          resolve(body.chat_token);
-        } else {
-          reject(body);
-        }
-      });
-    });
+    const body = await this.request(ENDPOINTS.GET_TOKEN, {pass});
+    if (body.ok) {
+      debug("Token is:", body.chat_token);
+      this.token = body.chat_token;
+      return body.chat_token;
+    } else {
+      throw new Error(body);
+    }
   }
 
-  public async getAccountData(): Promise<Account> {
-    return new Promise<Account>((resolve, reject) => {
-      request.post(API_URL + ENDPOINTS.ACCOUNT_DATA, {
-        json: {
-          chat_token: this.token,
-        },
-      }, (err, res, body) => {
-        if (err) {
-          reject(err);
-          return;
-        }
-        debug("Requested account_data:", res.statusCode);
-        if (body.ok) {
-          const users: User[] = [];
-          for (const ownUser in body.users) {
-            if (ownUser) {
-              const channels: Channel[] = [];
+  public async getAccountData() {
+    const body = await this.request(ENDPOINTS.ACCOUNT_DATA, {chat_token: this.token});
+    if (body.ok) {
+      const users: User[] = [];
+      for (const ownUser in body.users) {
+        if (ownUser) {
+          const channels: Channel[] = [];
 
-              for (const channelName in body.users[ownUser]) {
-                if (channelName) {
-                  channels.push(new Channel(this, channelName, body.users[ownUser][channelName], ownUser));
-                }
-              }
-
-              users.push(new User(this, ownUser, channels));
+          for (const channelName in body.users[ownUser]) {
+            if (channelName) {
+              channels.push(new Channel(this, channelName, body.users[ownUser][channelName], ownUser));
             }
           }
-          resolve(new Account(this, users));
-        } else {
-          reject(body);
+          users.push(new User(this, ownUser, channels));
         }
-      });
-    });
+      }
+      return new Account(this, users);
+    } else {
+      throw new Error(body);
+    }
   }
 
   public async sendChannel(channel: string, user: string, msg: string) {
-    return new Promise<void>((resolve, reject) => {
-      request.post(API_URL + ENDPOINTS.CREATE_CHAT, {
-        json: {
-          chat_token: this.token,
-          username: user,
-          channel,
-          msg,
-        },
-      }, (err, res, body) => {
-        if (err) {
-          reject(err);
-          return;
-        }
-        debug("Requested create_chat (send):", res.statusCode);
-        if (!body.ok) {
-          reject(body);
-        } else {
-          resolve();
-        }
-      });
+    const body = await this.request(ENDPOINTS.CREATE_CHAT, {
+      chat_token: this.token,
+      username: user,
+      channel,
+      msg,
     });
+    if (!body.ok) {
+      throw new Error(body);
+    }
   }
 
   public async sendMessage(user: string, toUser: string, msg: string) {
-    return new Promise<void>((resolve, reject) => {
-      request.post(API_URL + ENDPOINTS.CREATE_CHAT, {
-        json: {
-          chat_token: this.token,
-          username: user,
-          tell: toUser,
-          msg,
-        },
-      }, (err, res, body) => {
-        if (err) {
-          reject(err);
-          return;
-        }
-        debug("Requested create_chat (tell):", res.statusCode);
-        if (!body.ok) {
-          reject(body);
-        } else {
-          resolve();
-        }
-      });
+    const body = await this.request(ENDPOINTS.ACCOUNT_DATA, {
+      chat_token: this.token,
+      username: user,
+      tell: toUser,
+      msg,
     });
+    if (!body.ok) {
+      throw new Error(body);
+    }
   }
 
   public async getChats(users: string[], after?: number, before?: number) {
-    return new Promise<any>((resolve, reject) => {
-      request.post(API_URL + ENDPOINTS.CHATS, {
-        json: {
-          chat_token: this.token,
+    const body = await this.request(ENDPOINTS.CHATS, {
+      chat_token: this.token,
           usernames: users,
           before,
           after,
-        },
-      }, (err, res, body) => {
-        if (err) {
-          reject(err);
-          return;
-        }
-        debug("Requested chats:", res.statusCode);
-        if (!body.ok) {
-          reject(body);
-        } else {
-          resolve(body);
-        }
-      });
     });
+    if (!body.ok) {
+      throw new Error(body);
+    } else {
+      return body;
+    }
   }
 }
